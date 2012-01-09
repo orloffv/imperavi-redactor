@@ -1,0 +1,40 @@
+body {
+  line-height: 1.3;
+  font-family: "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;   
+  color:#000;
+  background: none;
+  font-size: 10pt;
+}
+
+h1,h2,h3,h4,h5,h6 { font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif; }
+code { font:.9em "Courier New", Monaco, Courier, monospace; } 
+
+a img { border:none; }
+
+a:link, a:visited {
+	background: transparent;
+	text-decoration: underline;
+	color: #000;
+}
+
+hr { 
+  background:#ccc; 
+  color:#ccc;
+  width:100%;
+  height:1px;
+  margin:2em 0;
+  padding:0;
+  border:none;
+}
+
+blockquote {
+  margin:1.5em;
+  padding:1em;
+  font-style:italic;
+  font-size:.9em;
+}
+
+.small { font-size: .8em; }
+.mini  { font-size: .9em; }
+.big  { font-size: 1.2em; }
+.soft  { color: #999; }

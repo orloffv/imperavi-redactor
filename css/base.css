@@ -1,0 +1,301 @@
+/*
+	v2.0.1
+	Last Updated: 2011-02-23
+	Author: Imperavi Ltd. - http://imperavi.com 
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a {
+	outline: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+textarea {
+	overflow: auto;
+}
+input { 
+	margin: 0; 
+}
+
+/* =Typography
+-----------------------------------------------------------------------------*/
+body {
+	background: white; 
+	color: black;
+	font: 14px/1.5em Arial, "Helvetica Neue", Helvetica, Verdana, sans-serif; 
+}
+
+h1 {
+	font-size: 2.6em;
+	line-height: 1;
+	margin-bottom: .45em;
+}
+h2 { 
+	font-size: 2.1em;
+	line-height: 1;
+	margin-bottom: 0.5em;
+}
+h3 { 
+	font-size: 1.7em;
+	line-height: 1;	
+	margin-bottom: 0.7em;
+}
+h4 {
+	font-size: 1.3em;
+	line-height: 1;
+	margin-bottom: 1em;		
+}
+h5 {
+	font-size: 1em;
+	line-height: 1.1em;
+	margin-bottom: 0.5em;
+	font-weight: bold;	
+}
+h6 {
+	font-size: 1em;
+	line-height: 1;
+	margin-bottom: 0.5em;	
+	font-weight: bold;		
+	text-transform: uppercase;
+}
+
+p, ul, ol, dl, dd, dt, blockquote, table td { 
+	font-size: 1em; 
+	line-height: 1.5em; 
+}
+
+p { margin: 0 0 1.5em 0; }
+p.pause { margin-bottom: 0.5em  }
+p.last { margin-bottom: 0; }
+
+
+ul, ol { margin: 0 0 1.5em 1.5em; }
+ul li ul, ol li ol, ul li ol, ol li ul { font-size: 1em; margin: .5em 0 .5em 1.5em; } 
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; margin-left: 2em; }
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+dd { margin-left: 1.5em;}
+
+blockquote { margin: 1.5em; color: #444; font-style: italic; }
+
+hr { background: #ddd; color: #ddd; clear: both; float: none; width: 100%; height: 1px; margin: 0 0 1.5em; border: none; }
+hr.space { background: none; color: #fff; visibility: hidden; }
+hr.black { background-color: #191919; }
+hr.soft { background-color: #eee; color: #eee; }
+hr.h2 { height: 2px; }
+hr.h3 { height: 3px; }
+hr.h4 { height: 4px; }
+hr.h5 { height: 5px; }
+
+abbr, 
+acronym { border-bottom: 1px dotted #666; }
+del { color:#666; }
+
+big { font-size: 125%; line-height:80%; }
+small,sup,sub { font-size: 0.8em; }
+cite { font-style: italic; }
+
+strong, b { font-weight: bold; }
+em,dfn, i     { font-style: italic; }
+dfn         { font-weight: bold; }
+pre,code,tt, var { font: .9em 'andale mono', 'lucida console', monospace; line-height: 1.5em; } 
+pre,code    { margin: 1.5em 0; white-space: pre; overflow: auto; padding: 1em; border: 1px dashed #ddd; }
+tt          { display: block; margin: 1.5em 0; line-height: 1.5em; }
+sup, sub {  vertical-align: baseline; position: relative; }
+sup { top: -0.4em; }
+sub { bottom: -0.3em; }
+kbd { background-color: #eee; padding: 0 2px; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; }
+
+
+/* =Tables
+-----------------------------------------------------------------------------*/
+table   { margin-bottom: 1.5em; font-size: 96%; border-collapse: collapse; }
+thead td, thead th  { border-bottom: 2px solid #d4d4d4; font-weight: bold; font-size: 1em; line-height: 1;  }
+td      { border-bottom: 1px solid #eee; }
+th, td   { padding: 4px 10px 4px 0; }
+tfoot   { font-style: italic; }
+caption { background: #ffc; }
+
+table.simple td { border: none; }
+
+table.ruler thead td, table.ruler thead th, table.ruler td { padding: 4px 7px; }
+table.ruler thead td { padding: 7px; border-bottom: 2px solid #000 !important;  }
+table.ruler.border td { border: 1px solid #ddd; }
+table.ruler.stroke td { border-bottom: 1px solid #ddd; }
+table.ruler.pads tbody td { padding: 10px 5px; }
+
+table .last { padding-right: 0; }
+table .end td { border-bottom: none; } 
+
+table.forms { margin: 0; }
+table.forms td { border: none; }
+table tr.labels td { font-weight: bold; font-size: 1em; padding-bottom: 0; }
+table tr.descr td { font-size: 0.9em; line-height: 1.3em; color: #777; padding-top: 0 !important; padding-bottom: 10px !important; vertical-align: top; }
+
+tfoot td {
+	border-top: 2px solid #ddd;
+	font-size: .9em;
+	padding-top: 7px !important;
+	border-bottom: none !important;
+}
+
+/* =Forms
+-----------------------------------------------------------------------------*/
+fieldset { padding:1.4em; padding-bottom: 0; margin: 0 0 1.5em 0; border: 1px solid #ddd; }
+legend { font-weight: bold; font-size:1.1em; padding: 0 0.5em; }
+textarea, input { padding: .1em 0; font-size: 13px; }
+select {  font-size: 13px; }
+select[multiple] { margin-bottom:.8em; }
+button { padding:.3em .5em; }
+input[type="submit"], input[type="button"]  { padding: .1em .2em; }
+
+/* =Misc
+-----------------------------------------------------------------------------*/
+.handle { cursor: move; }
+.nowrap { white-space: nowrap; }
+.clear {  clear: both; }
+
+/* =Backgrounds
+-----------------------------------------------------------------------------*/
+.odd { background-color: #fff; }
+.even { background-color: #eee; }
+.disabled { background-color: #eee !important; color: #999 !important; }
+.highlight { background-color: #fcf4cd !important; }
+
+/* =Sizes
+-----------------------------------------------------------------------------*/
+.small { font-size: .8em; line-height: 1.2em !important; }
+.mini  { font-size: .9em; line-height: 1.2em; }
+.big  { font-size: 125%; line-height: 80%;  }
+
+/* =Styles
+-----------------------------------------------------------------------------*/
+.normal { font-weight: normal !important; }
+.bold { font-weight: bold !important; }
+
+/* =Colors
+-----------------------------------------------------------------------------*/
+.soft { color: #888 !important; }
+.gray { color: #333; }
+.dark {color: #666 !important; }
+.red, .req { color: #c43d48 !important; }
+.req { font-weight: normal !important; }
+.black { color: #000; }
+
+
+/* =Dashed
+-----------------------------------------------------------------------------*/
+.dashed { color: #0083d6; text-decoration: none; border-bottom: 1px dashed #0083d6; line-height: 1em !important;	}
+.dashed:hover { color: #900; text-decoration: none; border-bottom: 1px dashed #900; }
+.soft.dashed { color: #777; border-bottom: 1px dashed #999 !important; }
+.soft.dashed:hover { color: #900 !important; border-bottom: 1px dashed #900 !important; }
+.gray.dashed { color: #555; border-bottom: 1px dashed #777 !important; }
+.gray.dashed:hover { color: #900 !important; border-bottom: 1px dashed #900 !important; }
+.black.dashed { color: #000; border-bottom: 1px dashed #000; }
+.black.dashed:hover { color: #900; border-bottom: 1px dashed #900; }
+
+/* =Errors
+-----------------------------------------------------------------------------*/
+.error { color: #a40000 !important; font-weight: normal !important; font-size: .9em !important; }
+.error_ins { border: 3px solid #c21a1a !important; background-color: #f7d6d6 !important; }
+
+/* =Width
+-----------------------------------------------------------------------------*/
+.w50 { width: 50%; }
+.w100 { width: 100%; }
+input.w100 { width: 99.4%;}
+textarea.w100 { width: 99.6%; }
+select.w100 { width: 99.8%; }
+
+/* =Aligns
+-----------------------------------------------------------------------------*/
+.taright { text-align: right !important; }
+.taleft { text-align: left !important; }
+.tacenter { text-align: center !important; }
+
+.vatop { vertical-align: top !important; }
+.vabottom { vertical-align: bottom !important; }
+.vamiddle { vertical-align: middle !important; }
+.vamiddle img { vertical-align: middle !important; }
+
+
+/* =Grid
+-----------------------------------------------------------------------------*/
+.container { overflow: hidden; }
+
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
+
+
+/* =Icons
+-----------------------------------------------------------------------------*/
+.ico { display: -moz-inline-box; display:inline-block; text-decoration: none; background-repeat: no-repeat; }
+.ico:hover { text-decoration: none !important; }
+.ico9 { height:9px; width:9px; line-height: 9px; }
+.ico9:hover { background-position: -9px; }
+.ico10 { height:10px; width:10px; line-height: 10px; }
+.ico10:hover { background-position: -10px; }
+.ico11 { height:11px; width:11px; line-height: 11px; }
+.ico11:hover { background-position: -11px; }
+.ico12 { height:12px; width:12px; line-height: 12px; }
+.ico12:hover { background-position: -12px; }
+.ico13 { height:13px; width:13px; line-height: 13px; }
+.ico13:hover { background-position: -13px; }
+.ico14 { height:14px; width:14px; line-height: 14px; }
+.ico14:hover { background-position: -14px; }
+.ico15 { height:15px; width:15px; line-height: 15px; }
+.ico15:hover { background-position: -15px; }
+.ico16 { height:16px; width:16px; line-height: 16px; }
+.ico16:hover { background-position: -16px !important;; }
+.ico18 { height:18px; width:18px; line-height: 18px; }
+.ico18:hover { background-position: -18px; }
+.ico20 { height: 20px; width: 20px; line-height: 20px; }
+.ico20:hover { background-position: -20px; }
+.ico24 { height:24px; width:24px; line-height: 24px; }
+.ico24:hover { background-position: -24px; }
+.ico32 { height:32px; width:32px; line-height: 32px; }
+.ico32:hover { background-position: -32px; }
+.ico36 { height:36px; width:36px; line-height: 36px; }
+.ico36:hover { background-position: -36px; }
+.ico_no_hover, .ico_no_hover:hover { background-position: 0% !important; }
