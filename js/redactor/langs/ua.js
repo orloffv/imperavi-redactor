@@ -61,5 +61,13 @@ var RLANG = {
 	download: 'Завантажити',
 	choose: 'Выбрать',
 	or_choose: 'Или выберите',
-	drop_file_here: 'Перетащите файл сюда'		
+	drop_file_here: 'Перетащите файл сюда',
+	align_left:	'По левому краю',	
+	align_center: 'По центру',
+	align_right: 'По правому краю',
+	align_justify: 'Выровнять текст по ширине',
+	horizontalrule: 'Горизонтальная линейка',
+	fullscreen: 'Во весь экран',
+	deleted: 'Зачеркнутый',
+	none: 'Нет'							
 };

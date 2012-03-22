@@ -8,11 +8,25 @@ if (!empty($_FILES['file']['name']))
 	
 	$file_size = $_FILES['file']['size'];
 	$file_type = info($_FILES['file']['name'], 'type');
-	$file_name = str_replace('.'.$file_type, '', $_FILES['file']['name']);		
+	
 
-	// $file_id = md5(date('YmdHis').$file_name);
+	$file_name = strip_tags($_FILES['file']['name']);
+	$file_name = str_replace('/', '', $file_name);		
+	$file_name = str_replace('\\', '', $file_name);				
+	$file_name = str_replace('..', '', $file_name);				
+	$file_name = str_replace('...', '', $file_name);						
+	$file_name = str_replace('.\\', '', $file_name);						
+	$file_name = str_replace('./', '', $file_name);
+	$file_name = preg_replace('/^\./i', '', $file_name);	
+		
+	$file_name = str_replace('.'.$file_type, '', $_FILES['file']['name']);			
+
+	if ($file_type == 'php')  $file_name = str_replace('.php', '.phps', $file_name);
+	if ($file_type == 'php5')  $file_name = str_replace('.php5', '.phps', $file_name);	
+	if ($file_type == 'php4')  $file_name = str_replace('.php4', '.phps', $file_name);		
 	
 	$file_name = get_filename(FILES_ROOT, $_FILES['file']['name'], $file_type);
+
 
 
 	$file_ico = get_ico($file_type);

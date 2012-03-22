@@ -59,7 +59,14 @@ var RLANG = {
 	file: 'Fails',
 	upload: 'Augšupielāde',
 	download: 'Lejupielāde',
-	choose: 'Choose',
-	or_choose: 'Or choose',
-	drop_file_here: 'Drop file here'			
+	choose: 'Izvēlieties',
+	or_choose: 'Vai izvēlieties',
+	drop_file_here: 'Vilkt failu uz šejieni',
+	align_left:	'Izlīdzināt pa labi',
+	align_center: 'Izlīdzināt pa kreisi',
+	align_right: 'Izlīdzināt pret centru',
+	align_justify: 'Izlīdzināt malas',
+	horizontalrule: 'Horizontāla līnija',
+	fullscreen: 'Pa visu ekrānu',
+	none: 'None'	
 };
