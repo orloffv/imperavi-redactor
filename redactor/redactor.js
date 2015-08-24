@@ -91,6 +91,13 @@ var RLANG = {
 	// Plugin
 	jQuery.fn.redactor = function(option)
 	{
+		if(typeof $.browser == 'undefined'){
+			$.browser={};
+			$.browser.chrome = /Chrome/.test(navigator.userAgent);
+			$.browser.safari = /Safari/.test(navigator.userAgent);
+			$.browser.mozilla = /Mozilla/.test(navigator.userAgent);
+		}
+		
 		return this.each(function() 
 		{
 			var $obj = $(this);
